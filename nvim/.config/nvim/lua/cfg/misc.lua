@@ -178,3 +178,5 @@ require('telescope').setup({
     },
   },
 })
+
+require('oil').setup()
