@@ -1,14 +1,11 @@
 -- Highlight every yank (including the ones made in visual mode)
-function highlight_on_yank()
-  require('vim.hl').on_yank()
-  return nil
-end
-
-luahl = vim.api.nvim_create_augroup("LuaHighlight", {})
+local luahl = vim.api.nvim_create_augroup("LuaHighlight", {})
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = luahl,
   pattern = "*",
-  callback = highlight_on_yank
+  callback = function()
+    vim.hl.on_yank()
+  end,
 })
 
 -- clean cmdline messages autmatically
