@@ -11,6 +11,8 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 # Homebrew
 if [ -e /opt/homebrew/bin/brew ]; then eval $(/opt/homebrew/bin/brew shellenv); fi
 [[ "$PATH" =~ "/opt/homebrew/share/google-cloud-sdk/bin" ]] || PATH="$PATH:/opt/homebrew/share/google-cloud-sdk/bin"
+[[ "$PATH" =~ "/opt/homebrew/opt/make/libexec/gnubin" ]] || PATH="$PATH:/opt/homebrew/opt/make/libexec/gnubin"
+[[ "$PATH" =~ "/opt/homebrew/Cellar/avr-gcc@8/8.5.0_3/bin/" ]] || PATH="$PATH:/opt/homebrew/Cellar/avr-gcc@8/8.5.0_3/bin/"
 
 # Custom paths
 #
@@ -21,6 +23,7 @@ if [ -e /opt/homebrew/bin/brew ]; then eval $(/opt/homebrew/bin/brew shellenv); 
 # hijacking attacks more difficult.
 #
 [[ "$PATH" =~ "$HOME/.local/bin" ]] || PATH="$PATH:$HOME/.local/bin"
+[[ "$PATH" =~ "$HOME/.local/share/nvim/mason/bin" ]] || PATH="$PATH:$HOME/.local/share/nvim/mason/bin"
 [[ "$PATH" =~ "$HOME/bin" ]] || PATH="$PATH:$HOME/bin"
 [[ "$PATH" =~ "$HOME/.npm-packages/bin" ]] || PATH="$PATH:$HOME/.npm-packages/bin"
 [[ "$PATH" =~ "$HOME/.luarocks/bin" ]] || PATH="$PATH:$HOME/.luarocks/bin"
