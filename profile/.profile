@@ -38,6 +38,7 @@ if [ -e /opt/homebrew/bin/brew ]; then eval $(/opt/homebrew/bin/brew shellenv); 
 [[ "$PATH" =~ "$HOME/.pub-cache/bin" ]] || PATH="$PATH:$HOME/.pub-cache/bin" # pub (dart-devtools cli)
 [[ "$PATH" =~ "$HOME/development/flutter/bin" ]] || PATH="$PATH:$HOME/development/flutter/bin"
 [[ "$PATH" =~ "$HOME/.docker/bin" ]] || PATH="$PATH:$HOME/.docker/bin"
+[[ "$PATH" =~ "$HOME/pi" ]] || PATH="$PATH:$HOME/pi"
 [[ "$PATH" =~ "$HOME/local/nvim" ]] || PATH="$HOME/local/nvim/bin:$PATH"
 export PATH
 

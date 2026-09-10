@@ -1,3 +1,15 @@
+vim.g.cilpboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+  },
+  paste = {
+    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+  },
+}
+
 -- lualine.nvim
 -- -- Copyright (c) 2020-2021 shadmansaleh
 -- MIT license, see LICENSE for more details.
