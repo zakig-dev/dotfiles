@@ -1,11 +1,12 @@
 -- TODO: move all servers to the mapping below
-local servers = {  'gopls', 'clojure_lsp', 'jdtls', 'ts_ls', 'eslint' }
+local servers = {  'gopls', 'clojure_lsp', 'jdtls', 'eslint' }
 
 for _, server in ipairs(servers) do
   vim.lsp.enable(server)
 end
 
 executable_cfg_mapping = {
+  ['typescript-language-server'] = 'ts_ls',
   ['pyright-langserver'] = 'pyright',
   ['rust-analyzer'] = 'rust_analyzer',
   ['dart'] = 'dartls',
