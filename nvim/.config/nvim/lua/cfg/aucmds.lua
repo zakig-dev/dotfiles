@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   group = luahl,
   pattern = "*",
   callback = function()
-    vim.hl.on_yank()
+    vim.hl.hl_op()
   end,
 })
 
